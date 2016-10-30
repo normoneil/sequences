@@ -5,12 +5,12 @@ class GuessesController < ApplicationController
     # g.save
     #
     # @guesses = params["first_number", "second_number"]
-    # render("guesses/index.html.erb")
+    render("guesses/index.html.erb")
   end
 
   def answer
-    # params = {"q"=>"Increasing numbers"}
-    @user_answer = params["q"]
+    # params = {"rule"=>"Increasing numbers"}
+    @user_answer = params["rule"]
     render("guesses/answer.html.erb")
   end
 end
