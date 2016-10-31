@@ -1,9 +1,9 @@
 class GuessesController < ApplicationController
   def index
     # 1.is_a? Integer
-    @first_number = params["first_number"]
-    @second_number = params["second_number"]
-    @third_number = params["third_number"]
+    @first_number = params["first_number"].to_i
+    @second_number = params["second_number"].to_i
+    @third_number = params["third_number"].to_i
     g = Guess.new
     g.first_number = @first_number
     g.second_number = @second_number
